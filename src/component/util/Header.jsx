@@ -1,32 +1,35 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Header = () => {
+const Header = ({isAuthenticated}) => {
   return (
-    <header className="bg-lime-400 px-20 py-4 text-1xl font-bold">
+    <header className="bg-lime-300 px-20 py-2 text-1xl font-bold">
       <nav className="flex justify-between items-center">
         <Link>
-          <img src="https://e7.pngegg.com/pngimages/5/879/png-clipart-flipkart-e-commerce-vu-televisions-sales-gmail-logo-blue-text-thumbnail.png" alt=" logo img" className="h-16 rounded-full"/> 
+          <img src="https://bofrike.in/wp-content/uploads/2019/04/EKART-LOGO.png" alt=" logo img" className="h-12 rounded-xl border-2 border-orange-400"/> 
         </Link>
         {/*Search Bar*/}
         <div>
           <input
             type="text"
             placeholder="Search for Products,Categories,etc.."
-            className="rounded-3xl h-10 w-96 border-red-500"
+            className="rounded-3xl h-10 w-96 border-2 border-pink-300 p-4"
           />
         </div>
 
         {/*Link Block */}
         <div className="flex items-center space-x-5 font-weight: 600 ">
           {/*Log in */}
-          <Link to={"/login"} className="p-2 ">
+
+           {isAuthenticated ? <Link to={"/account"} className="p-2">Account</Link>:<Link to={"/login"} className="p-2 "> Log In</Link>}
+           
+          {/* {isAuthenticated || <Link to={"/login"} className="p-2 ">
             Log In
-          </Link>
+            </Link>} */}
 
           {/*Become seller Option */}
           <Link to={"/seller"} className="p-2">
-            Become A Seller
+            Become a Seller
           </Link>
 
           {/*Cart*/}

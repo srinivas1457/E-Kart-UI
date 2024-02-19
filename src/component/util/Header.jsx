@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Header = ({isAuthenticated}) => {
+const Header = ({username,isAuthenticated}) => {
   return (
     <header className="bg-lime-300 px-20 py-2 text-1xl font-bold">
       <nav className="flex justify-between items-center">
@@ -21,11 +21,11 @@ const Header = ({isAuthenticated}) => {
         <div className="flex items-center space-x-5 font-weight: 600 ">
           {/*Log in */}
 
-           {isAuthenticated ? <Link to={"/account"} className="p-2">Account</Link>:<Link to={"/login"} className="p-2 "> Log In</Link>}
+           {/* {isAuthenticated ? <Link to={"/account"} className="p-2">Account</Link>:<Link to={"/login"} className="p-2 "> Log In</Link>} */}
            
-          {/* {isAuthenticated || <Link to={"/login"} className="p-2 ">
-            Log In
-            </Link>} */}
+          <Link to={"/login"} className="p-2 ">
+          {isAuthenticated  && username || "Log in"}
+            </Link>
 
           {/*Become seller Option */}
           <Link to={"/seller"} className="p-2">

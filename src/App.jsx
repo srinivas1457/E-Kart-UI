@@ -3,10 +3,10 @@ import Header from './component/Util/Header'
 import { Outlet } from 'react-router-dom'
 import Register from './component/Public/Register'
 
-const App = ({isAuthenticated}) => {
+const App = ({ username, isAuthenticated}) => {
   return (
     <div>
-      <Header isAuthenticated={isAuthenticated}/>
+      <Header username={username} isAuthenticated={isAuthenticated}/>
       <Outlet/>
       
     </div>

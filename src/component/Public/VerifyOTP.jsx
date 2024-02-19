@@ -29,6 +29,7 @@ const VerifyOTP = () => {
       const response = await axios.post(URL, body, header);
       console.log(response);
       sessionStorage.removeItem('email');
+      window.alert(response.data.message);
       navigate("/login");
     } catch (error) {
       window.alert("OOPS!!! Wrong OTP. Please try again...");

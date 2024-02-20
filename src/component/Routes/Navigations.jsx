@@ -11,6 +11,7 @@ import Cart from '../Private/Customer/Cart'
 import Orders from '../Private/Customer/Orders'
 import SellerDashBoard from '../Private/Seller/SellerDashBoard'
 import SellerOrders from '../Private/Seller/SellerOrders'
+import Logout from '../Private/Common/Logout'
 
 const navs = [
     // ----------------------- BEFORE AUTH --------------------------- 
@@ -71,6 +72,14 @@ const navs = [
     requireAuth: true,
     isVisibleAfterAuth: true,
     role: "ALL",
+  },
+
+  {
+    path:"/logout",
+    element:<Logout/>,
+    requireAuth:true,
+    isVisibleAfterAuth:true,
+    role:"ALL"
   },
   // --------------------------- CUSTOMER --------------------------
   {

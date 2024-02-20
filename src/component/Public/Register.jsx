@@ -48,7 +48,7 @@ const Register = ({ role }) => {
         </span>
         <p className="p-2">
           Sign up with your{" "}
-          <span className="font-medium">email & password</span> to get started
+          <span className="font-medium">email & password</span> to get started as a <span className="font-medium">{role}</span>
         </p>
         <img
           src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/login_img_c4a81e.png"

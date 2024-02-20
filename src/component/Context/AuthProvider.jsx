@@ -24,6 +24,7 @@ const AuthProvider = ({child}) => {
       const user = await validateAndRefresh();
       
       if(user){
+        localStorage.setItem('user',JSON.stringify(user));
         setAuth({...user});
       }
       

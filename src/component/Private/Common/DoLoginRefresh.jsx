@@ -33,7 +33,11 @@ const DoLoginRefresh = () => {
     if (userString && userString !== "{}") {
       const user = JSON.parse(userString);
       if (new Date(user.refreshExpiration) > new Date()) {
+        
         if (new Date(user.accessExpiration) > new Date()) {
+          console.log("User -> "+user)
+          console.log("srinu");
+          
           return user;
         } else {
           console.log("above refresh call ");

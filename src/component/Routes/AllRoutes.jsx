@@ -20,13 +20,13 @@ const AllRoutes = () => {
           if (isAuthenticated) {
             if (nav.isVisibleAfterAuth) {
               if (nav.role === role || nav.role === "ALL") {
-                console.log(nav);
+                // console.log(nav);
                 return <Route key={i} path={nav.path} element={nav.element} />;
               }
             }
           } else {
             if (!nav.requireAuth && nav.role === "ALL") {
-              console.log(nav);
+              // console.log(nav);
               return <Route key={i} path={nav.path} element={nav.element} />;
             }
           }
